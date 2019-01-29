@@ -1,2 +1,2 @@
 # chess
-a quick and dirty console chess implementation
+a quick and dirty console chess implementation using C#
