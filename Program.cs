@@ -44,6 +44,9 @@ namespace Chess
         public static void Main()
         {
             string tempPiece = "";
+            string tempPosition = "";
+            char tempRow;
+            string promotion = "";
             string input = "start";
             Console.Write("Start?");
             Console.ReadKey();
@@ -131,6 +134,34 @@ namespace Chess
                 {
                     if (move[1] == arrayBoard[i].Position)
                     {
+                        tempPosition = move[1];
+                        tempRow = tempPosition[tempPosition.Length - 1];
+                        if (tempPiece == "|p|" && tempRow == '8')
+                        {
+                            Console.Write("knight or queen? ");
+                            promotion = Console.ReadLine();
+                            if(promotion == "knight")
+                            {
+                                tempPiece = "|n|";
+                            }
+                            else
+                            {
+                                tempPiece = "|q|";
+                            }
+                        }
+                        else if(tempPiece == "|P|" && tempRow == '1')
+                        {
+                            Console.Write("knight or queen? ");
+                            promotion = Console.ReadLine();
+                            if (promotion == "knight")
+                            {
+                                tempPiece = "|N|";
+                            }
+                            else
+                            {
+                                tempPiece = "|Q|";
+                            }
+                        }
                         arrayBoard[i].Piece = tempPiece;
                     }
                 }
