@@ -1,5 +1,5 @@
 # chess
-a quick and dirty console chess implementation using C#
+c# console chess implementation
 
 moves are input via two board positions separated by a space (g2 g4, for example, moves the piece at g2 to g4)
 
